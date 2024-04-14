@@ -1,0 +1,18 @@
+﻿﻿@{
+    var user = await UserManager.GetUserAsync(User) ?? null;
+    var activePage = ViewData["ActivePage"]?.ToString();
+}
+
+<section class="side-bar">
+    <div class="profile">
+        <img class="profile-image" src="~/images/profile/pfp.svg" alt="">
+        <h6 class="profile-name">@(user?.FirstName ?? "") @(user?.LastName ?? "")</h6>
+        <p class="profile-email">@(user?.Email ?? "")</p>
+    </div>
+    <nav class="user-menu">
+        <a asp-action="Details" asp-controller="Account" class="@((activePage == "Details") ? "active" : "")"><i class="fa-regular fa-gear"></i>Account Details</a>
+        <a asp-action="Security" asp-controller="Account" class="@((activePage == "Security") ? "active" : "")"><i class="fa-regular fa-lock"></i>Security</a>
+        <a asp-action="SavedCourses" asp-controller="Account" class="@((activePage == "Saved Courses") ? "active" : "")"><i class="fa-regular fa-bookmark"></i>Saved Courses</a>
+        <a asp-action="SignOut" asp-controller="Auth"><i class="fa-duotone fa-arrow-right-from-bracket"></i>Sign Out</a>
+    </nav>
+</section>

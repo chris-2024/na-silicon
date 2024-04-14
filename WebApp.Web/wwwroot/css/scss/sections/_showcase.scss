@@ -1,0 +1,72 @@
+.showcase {
+    position: relative;
+    padding-bottom: 2rem;
+
+    @include md {
+        min-height: 50vh;
+        padding-bottom: 4rem;
+    }
+
+    @include xl {
+        padding-bottom: 8rem;
+    }
+
+    .container {
+
+        .showcase-img {
+            display: none;
+            z-index: -1;
+
+            @include md {
+                position: absolute;
+                right: 0;
+                display: block;
+                width: 30rem;
+            }
+
+            @include lg {
+                width: 35rem;
+            }
+
+            @include xl {
+                width: 40rem;
+            }
+        }
+
+        .content {
+            text-align: center;
+
+            @include md {
+                padding-top: 2rem;
+                text-align: left;
+                width: 50%;
+            }
+
+            @include lg {
+                padding-top: 3rem;
+                width: 45%;
+            }
+
+            .get-started {
+                margin: 4rem 0;
+
+                @include sm {
+                    padding: 0 8rem;
+                    .btn {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .brands {
+                position: static;
+                width: 100%;
+
+                @include md {
+                    position: relative;
+                    width: 200%;
+                }
+            }
+        }
+    }
+}

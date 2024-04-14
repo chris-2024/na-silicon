@@ -1,0 +1,49 @@
+.home {
+    section {
+        min-height: 30vh;
+
+        @include sm {
+            img {
+                max-width: 20rem;
+            }
+        }
+    }
+}
+
+.theme-showcase {
+    padding: 4rem 0;
+    background: linear-gradient(to right, #0B0f19 0%, #0B0f19 50%, white 50%, white 100%);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        div {
+            margin-bottom: 2rem;
+            text-align: center;
+            margin-left: 1.2rem;
+
+            .dark-text {
+                color: var(--color-black);
+
+                @include sm {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .light-text {
+                color: var(--color-white);
+
+                @include sm {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

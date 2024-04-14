@@ -1,0 +1,52 @@
+﻿@model UserDetailsViewModel;
+
+@{
+    ViewData["ActivePage"] = "Details";
+}
+
+<section class="account-details">
+    <div class="container">
+        <partial name="~/views/Partials/_UserMenu.cshtml" />
+        <section class="content">
+            <form asp-action="UpdateDetails" method="post">
+                <div class="input-group">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="input-group">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="input-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="input-group">
+                    <label asp-for="Phone"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="input-group">
+                    <label asp-for="Addressline1"></label>
+                    <input asp-for="Addressline1" class="form-control" />
+                </div>
+                <div class="input-group">
+                    <label asp-for="Addressline2"></label>
+                    <input asp-for="Addressline2" class="form-control" />
+                </div>
+                <div class="input-group">
+                    <label asp-for="PostalCode"></label>
+                    <input asp-for="PostalCode" class="form-control" />
+                </div>
+                <div class="input-group">
+                    <label asp-for="City"></label>
+                    <input asp-for="City" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-theme btn-30">Update</button>
+            </form>
+        </section>
+    </div>
+</section>

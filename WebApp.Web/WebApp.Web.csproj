@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\images\brands\brand_1.svg" />
+    <None Include="wwwroot\images\brands\brand_2.svg" />
+    <None Include="wwwroot\images\brands\brand_3.svg" />
+    <None Include="wwwroot\images\brands\brand_4.svg" />
+    <None Include="wwwroot\images\courses\course_1.svg" />
+    <None Include="wwwroot\images\courses\course_1_big.svg" />
+    <None Include="wwwroot\images\courses\course_2.svg" />
+    <None Include="wwwroot\images\courses\course_3.svg" />
+    <None Include="wwwroot\images\courses\course_4.svg" />
+    <None Include="wwwroot\images\courses\course_5.svg" />
+    <None Include="wwwroot\images\courses\course_6.svg" />
+    <None Include="wwwroot\images\courses\course_7.svg" />
+    <None Include="wwwroot\images\courses\course_8.svg" />
+    <None Include="wwwroot\images\courses\course_9.svg" />
+    <None Include="wwwroot\images\icons\add-group-icon.svg" />
+    <None Include="wwwroot\images\icons\bell-icon.svg" />
+    <None Include="wwwroot\images\icons\chat-icon.svg" />
+    <None Include="wwwroot\images\icons\dropbox-icon.svg" />
+    <None Include="wwwroot\images\icons\envelope-icon.svg" />
+    <None Include="wwwroot\images\icons\evernote-icon.svg" />
+    <None Include="wwwroot\images\icons\gmail-icon.svg" />
+    <None Include="wwwroot\images\icons\google-icon.svg" />
+    <None Include="wwwroot\images\icons\mailchimp-icon.svg" />
+    <None Include="wwwroot\images\icons\presentation-icon.svg" />
+    <None Include="wwwroot\images\icons\shield-icon.svg" />
+    <None Include="wwwroot\images\icons\slack-icon.svg" />
+    <None Include="wwwroot\images\icons\swirl-arrow-icon.svg" />
+    <None Include="wwwroot\images\icons\test-icon.svg" />
+    <None Include="wwwroot\images\icons\trello-icon.svg" />
+    <None Include="wwwroot\images\icons\zoom-icon.svg" />
+    <None Include="wwwroot\images\logos\logo-dark.svg" />
+    <None Include="wwwroot\images\logos\logo-light.svg" />
+    <None Include="wwwroot\images\other\appstore-download-icon-dark.svg" />
+    <None Include="wwwroot\images\other\appstore-download-icon-light.svg" />
+    <None Include="wwwroot\images\other\googleplay-download-icon-dark.svg" />
+    <None Include="wwwroot\images\other\googleplay-download-icon-light.svg" />
+    <None Include="wwwroot\images\other\illustration-dark.svg" />
+    <None Include="wwwroot\images\other\illustration-light.svg" />
+    <None Include="wwwroot\images\other\laptop-screen-dark.svg" />
+    <None Include="wwwroot\images\other\laptop-screen-light.svg" />
+    <None Include="wwwroot\images\other\macbook-pro-laptop.svg" />
+    <None Include="wwwroot\images\other\map.svg" />
+    <None Include="wwwroot\images\other\taskmaster-front.svg" />
+    <None Include="wwwroot\images\other\taskmaster-mobile-iphone12-with-screen_1.svg" />
+    <None Include="wwwroot\images\other\taskmaster-mobile-screen_1.svg" />
+    <None Include="wwwroot\images\other\taskmaster-twisted.svg" />
+    <None Include="wwwroot\images\profile\pfp.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApp.Lib\WebApp.Lib.csproj" />
+  </ItemGroup>
+
+</Project>

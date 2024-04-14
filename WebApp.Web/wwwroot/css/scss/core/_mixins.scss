@@ -1,0 +1,47 @@
+@mixin sm {
+    @media (max-width: 767px) {
+        @content
+    }
+}
+
+@mixin md {
+    @media (min-width: 768px) {
+        @content
+    }
+}
+
+@mixin lg {
+    @media (min-width: 992px) {
+        @content
+    }
+}
+
+@mixin xl {
+    @media (min-width: 1200px) {
+        @content
+    }
+}
+
+@mixin xxl {
+    @media (min-width: 1400px) {
+        @content
+    }
+}
+
+@mixin standard-text {
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--color-gray-700);
+}
+
+@mixin standard-heading {
+    @include standard-text();
+    font-weight: 800;
+    color: var(--color-gray-900);
+}
+
+@mixin text-nav {
+    @include standard-text;
+    color: var(--color-gray-800);
+    font-weight: 600;
+}

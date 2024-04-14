@@ -1,0 +1,86 @@
+﻿@model CoursesViewModel
+
+@{
+    ViewData["ActivePage"] = "Courses";
+}
+
+<section class="courses">
+    <div class="container">
+        <div class="course-header">
+            <h2>Courses</h2>
+            <form class="filters">
+                <div class="select">
+                    <div class="selected">All Categories</div>
+                    <div class="select-options">
+                        <div class="option" data-value="all">All Categories</div>
+                        @if (Model.Categories != null)
+                            @foreach (var category in Model.Categories)
+                            {
+                                <div class="option" data-value="@category.Id">@category.CategoryName</div>
+                            }
+                    </div>
+                </div>
+
+                <div class="input-group input-search-group">
+                    <input id="search-query" name="search-query" placeholder="Search" />
+                    <i class="fa-regular fa-search"></i>
+                </div>
+            </form>
+        </div>
+        <div class="course-items">
+        @if (Model.Courses != null)
+            @foreach (var course in Model.Courses)
+            {
+                <a asp-action="CourseDetails" asp-controller="Course" asp-route-id="@course.Id" class="course-card">
+                    <div class="course-img">
+                        <img src="@Url.Content(course.ImageUrl)" alt="Course Image">
+                        <div class="btn btn-circle mark-course">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        @if (course.IsBestSeller)
+                        {
+                            <div>
+                                <p>Best Seller</p>
+                            </div>
+                        }
+                    </div>
+                    <div class="course-info">
+                        <div class="course-primary">
+                            <h5>@course.Title</h5>
+                            <p>By @course.Author</p>
+                            <div>
+                                <h6>$@course.OriginalPrice.ToString()</h6>
+                            </div>
+                        </div>
+                        <div class="course-secondary">
+                            <div>
+                                <i class="fa-regular fa-clock"></i>
+                                <p>@course.Hours hours</p>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                <p>@(string.IsNullOrEmpty(course.LikesInProcent) ? "0%" : course.LikesInProcent) (@(string.IsNullOrEmpty(course.NumbersOfLikes) ? "0" : course.NumbersOfLikes))</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+        @if (Model.Pagination != null)
+        {
+            <div class="pagination">
+                @for (int i = 1; i <= Model.Pagination.PageTotal; i++)
+                {
+                    if (i == Model.Pagination.CurrentPage)
+                    {
+                        <a class="active">@i</a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Courses", new { pageNumber = i, pageSize = Model.Pagination.PageSize })">@i</a>
+                    }
+                }
+            </div>
+        }
+    </div>
+</section>
