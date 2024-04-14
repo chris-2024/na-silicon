@@ -12,17 +12,17 @@
             <form asp-action="Security" method="post">
                 <div class="input-group">
                     <label asp-for="CurrentPassword"></label>
-                    <input asp-for="CurrentPassword" />
+                    <input asp-for="CurrentPassword" required />
                     <span asp-validation-for="CurrentPassword" class="text-danger"></span>
                 </div>
                 <div class="input-group">
                     <label asp-for="NewPassword"></label>
-                    <input asp-for="NewPassword" />
+                    <input asp-for="NewPassword" required />
                     <span asp-validation-for="NewPassword" class="text-danger"></span>
                 </div>
                 <div class="input-group">
                     <label asp-for="ConfirmPassword"></label>
-                    <input asp-for="ConfirmPassword" />
+                    <input asp-for="ConfirmPassword" required />
                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                 </div>
                 <div class="acc-buttons">
@@ -37,12 +37,12 @@
                     mind before the 14 days are up, sign in with your email and password, and we’ll send you a link to
                     reactivate your account.
                 </p>
-                <div class="acc-checkbox">
-                    <input type="checkbox" id="deleteCheckbox">
-                    <p>Yes, I want to delete my account.</p>
-                </div>
                 <form asp-action="DeleteAccount" method="post">
-                    <button class="btn btn-danger btn-30" type="submit">Delete</button>
+                    <div class="acc-checkbox">
+                        <input type="checkbox" id="deleteCheckbox" required>
+                        <p>Yes, I want to delete my account.</p>
+                    </div>
+                    <button id="deleteButton" class="btn btn-danger btn-30" type="submit">Delete</button>
                 </form>
             </div>
         </section>

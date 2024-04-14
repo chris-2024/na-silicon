@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const forms = document.querySelectorAll("form");
+    const deleteCheckbox = document.getElementById("deleteCheckbox");
+    const deleteButton = document.getElementById("deleteButton");
+
+    deleteCheckbox.addEventListener("change", function () {
+        deleteButton.disabled = !deleteCheckbox.checked;
+    });
 
     forms.forEach(function (form) {
         form.addEventListener("submit", function (event) {

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Lib.Contexts;
 using WebApp.Lib.Entities;
@@ -24,5 +25,9 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Default}/{action=Home}/{id?}");
-
+app.MapControllerRoute(
+    name: "404",
+    pattern: "{*url}",
+    defaults: new { controller = "Default", action = "NotFound" }
+    );
 app.Run();
