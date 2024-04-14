@@ -1,0 +1,43 @@
+.tools {
+
+    .container {
+
+        .tools-header {
+            text-align: center;
+        } 
+        
+        .tool-options {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin: 2rem 0;
+            padding: 0 2rem;
+
+
+            @include md {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include lg {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include xl {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .tool {
+                padding: 1rem;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center;
+                min-height: 10rem;
+                cursor: pointer;
+
+
+                &:hover {
+                    background-color: var(--color-gray-100);
+                }
+            }
+        }
+    }
+}

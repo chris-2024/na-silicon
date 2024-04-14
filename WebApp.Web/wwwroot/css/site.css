@@ -660,7 +660,7 @@ footer .container .copyright span {
 }
 @media (min-width: 1200px) {
   .showcase {
-    padding-bottom: 8rem;
+    padding-bottom: 10rem;
   }
 }
 .showcase .container .showcase-img {
@@ -830,6 +830,159 @@ footer .container .copyright span {
 .features .container .tool-features .feature-box:hover {
   background-color: var(--color-gray-000);
   cursor: pointer;
+}
+
+.tools .container .tools-header {
+  text-align: center;
+}
+.tools .container .tool-options {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .tools .container .tool-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .tools .container .tool-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .tools .container .tool-options {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.tools .container .tool-options .tool {
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 10rem;
+  cursor: pointer;
+}
+.tools .container .tool-options .tool:hover {
+  background-color: var(--color-gray-100);
+}
+
+.apps {
+  background-color: var(--color-gray-100);
+}
+.apps .container {
+  background-color: var(--color-gray-200);
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .apps .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.apps .container .apps-text-area {
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .apps .container .apps-text-area {
+    text-align: left;
+    padding-left: 2rem;
+  }
+}
+.apps .container .apps-text-area .apps-store {
+  margin: 1rem;
+}
+@media (min-width: 1200px) {
+  .apps .container .apps-text-area .apps-store {
+    gap: 4rem;
+    display: flex;
+    margin: 2rem 0;
+  }
+}
+.apps .container .apps-image {
+  display: none;
+  padding: 2rem;
+}
+@media (min-width: 1200px) {
+  .apps .container .apps-image {
+    display: block;
+    width: 100%;
+    margin-right: 2rem;
+  }
+}
+
+.work-content .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.work-content .container .content-info .content-item {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.6rem 0;
+}
+.work-content .container .content-info a {
+  margin-top: 1.2rem;
+}
+.work-content .container .content-info i {
+  margin-left: 0.5rem;
+}
+.work-content .container img {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .work-content .container img {
+    display: block;
+    width: 100%;
+    margin-right: 2rem;
+  }
+}
+
+.subscribe {
+  background-color: var(--color-gray-100);
+}
+.subscribe .container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+.subscribe .container .subscribe-header {
+  display: flex;
+  text-align: center;
+}
+.subscribe .container .subscribe-options .options {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.subscribe .container .subscribe-options .options label {
+  margin-right: 0.5rem;
+}
+@media (min-width: 992px) {
+  .subscribe .container .subscribe-options .options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.subscribe .container .subscribe-email {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .subscribe .container .subscribe-email {
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .subscribe .container img {
+    display: none;
+  }
 }
 
 .account-details .container {

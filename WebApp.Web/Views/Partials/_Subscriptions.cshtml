@@ -2,14 +2,14 @@
 
 <section class="subscribe">
     <div class="container">
-        <div class="title">
+        <div class="subscribe-header">
             <h2>Don't Want to Miss Anything?</h2>
             <img src="~/images/icons/swirl-arrow-icon.svg" />
         </div>
         <form method="post" asp-action="Subscribe" asp-controller="Api">
 
-            <div class="alternative">
-                <h4>Sign up for Newsletters</h4>
+            <div class="subscribe-options">
+                <h5>Sign up for Newsletters</h5>
 
                 <div class="options">
                     <div class="checkbox-group">
@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            <div class="email">
+            <div class="subscribe-email">
                 <div class="input-group">
                     <input asp-for="Email" />
                     <span asp-validation-for="Email" class="text-danger"></span>

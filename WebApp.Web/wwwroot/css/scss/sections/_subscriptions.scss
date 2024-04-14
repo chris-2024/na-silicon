@@ -1,0 +1,49 @@
+.subscribe {
+    background-color: var(--color-gray-100);
+
+    .container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 1rem;
+
+        .subscribe-header {
+            display: flex;
+            text-align: center;
+        }
+
+        .subscribe-options {
+
+            .options {
+                margin: 2rem 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                label {
+                    margin-right: 0.5rem;
+                }
+
+                @include lg {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+
+        .subscribe-email {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+
+            @include md {
+                grid-template-columns: 2fr 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @include sm {
+            img {
+                display: none;
+            }
+        }
+    }
+}

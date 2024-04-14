@@ -1,0 +1,46 @@
+.apps {
+    background-color: var(--color-gray-100);
+
+    .container {
+        background-color: var(--color-gray-200);
+        padding: 3rem;
+        justify-content: center;
+        align-items: center;
+
+        @include xl {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .apps-text-area {
+            text-align: center;
+
+            @include xl {
+                text-align: left;
+                padding-left: 2rem;
+            }
+
+            .apps-store {
+                margin: 1rem;
+
+                @include xl {
+                    gap: 4rem;
+                    display: flex;
+                    margin: 2rem 0;
+                }
+            }
+        }
+
+        .apps-image {
+            display: none;
+            padding: 2rem;
+
+
+            @include xl {
+                display: block;
+                width: 100%;
+                margin-right: 2rem;
+            }
+        }
+    }
+}
